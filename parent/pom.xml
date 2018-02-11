@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.liangsl.test</groupId>
-  <artifactId>test-parent</artifactId>
+  <artifactId>parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>test-parent</name>
+  <name>parent</name>
   <url>http://maven.apache.org</url>
 
   <properties>
