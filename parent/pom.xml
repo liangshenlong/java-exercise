@@ -12,13 +12,15 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <jdk.version>1.8</jdk.version>
+    <org.springframework.version>5.0.3.RELEASE</org.springframework.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>5.0.3.RELEASE</version>
+      <version>${org.springframework.version}</version>
     </dependency>
 
     <dependency>
@@ -29,5 +31,20 @@
     </dependency>
   </dependencies>
 
+  <build>
+    <finalName>maven build</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.1</version>
+        <configuration>
+          <source>${jdk.version}</source>
+          <target>${jdk.version}</target>
+          <encoding>${project.build.sourceEncoding}</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
 </project>
