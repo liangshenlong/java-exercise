@@ -2,6 +2,10 @@ package com.liangsl.test.classLoad;
 
 import java.io.*;
 
+/**
+ * 类加载机制的双亲委派模型在loadClass中实现
+ * 自定义类加载器一般不重写loadClass方法，只重写findClass方法即可
+ */
 public class FileSystemClassLoader extends ClassLoader {
     private String rootDir;
 
