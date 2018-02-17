@@ -103,7 +103,6 @@ public class NIOSocketServer {
     }
 
     private void doWrite(SelectionKey sk) throws IOException {
-        // TODO Auto-generated method stub
         SocketChannel channel = (SocketChannel) sk.channel();
         EchoClient echoClient = (EchoClient) sk.attachment();
         LinkedList<ByteBuffer> outq = echoClient.getOutputQueue();
@@ -118,7 +117,6 @@ public class NIOSocketServer {
                 outq.removeLast();
             }
         } catch (Exception e) {
-            // TODO: handle exception
             disconnect(sk);
         }
         if (outq.size() == 0) {
@@ -138,7 +136,6 @@ public class NIOSocketServer {
                 return;
             }
         } catch (Exception e) {
-            // TODO: handle exception
             disconnect(sk);
             return;
         }
@@ -156,7 +153,6 @@ public class NIOSocketServer {
     }
 
     private void disconnect(SelectionKey sk) throws IOException {
-        // TODO Auto-generated method stub
         if(sk != null) {
             sk.cancel();
             if(sk.channel() != null)
@@ -165,7 +161,6 @@ public class NIOSocketServer {
     }
 
     private void doAccept(SelectionKey sk) {
-        // TODO Auto-generated method stub
         ServerSocketChannel server = (ServerSocketChannel) sk.channel();
         SocketChannel clientChannel;
         try {
@@ -179,18 +174,12 @@ public class NIOSocketServer {
             System.out.println("Accepted connection from "
                     + clientAddress.getHostAddress());
         } catch (Exception e) {
-            // TODO: handle exception
         }
     }
 
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
+    public static void main(String[] args) throws Exception {
         NIOSocketServer echoServer = new NIOSocketServer();
-        try {
-            echoServer.startServer();
-        } catch (Exception e) {
-            // TODO: handle exception
-        }
+        echoServer.startServer();
 
     }
 }
