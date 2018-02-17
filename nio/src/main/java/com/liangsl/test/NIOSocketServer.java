@@ -51,6 +51,11 @@ public class NIOSocketServer {
             // TODO Auto-generated method stub
             EchoClient echoClient = (EchoClient) sk.attachment();
             echoClient.enqueue(bb);
+            /**
+             * socket有数据来的时候状态为可读，空闲时状态为可写
+             * 因此在doRead操作后设置selectionKey的ops为SelectionKey.OP_READ | SelectionKey.OP_WRITE
+             * 在selector下次轮询时会进入doWrite方法
+             */
             sk.interestOps(SelectionKey.OP_READ | SelectionKey.OP_WRITE);
             selector.wakeup();
         }
