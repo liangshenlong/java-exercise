@@ -38,7 +38,7 @@ public class App
 
     }
 
-    private static String byteBufferToString(ByteBuffer byteBuffer) {
+    public static String byteBufferToString(ByteBuffer byteBuffer) {
         CharBuffer charBuffer = null;
         Charset charset = null;
         CharsetDecoder decoder = null;
