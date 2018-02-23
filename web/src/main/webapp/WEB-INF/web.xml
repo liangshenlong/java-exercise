@@ -6,10 +6,9 @@
   <display-name>Archetype Created Web Application</display-name>
 
   <!-- 配置web.xml，使其具有springmvc特性，主要配置两处，一个是ContextLoaderListener，一个是DispatcherServlet -->
-  <context-param>
-    <param-name>contextConfigLocation</param-name>
-    <param-value>classpath*:applicationContext.xml</param-value>
-  </context-param>
+  <!--<listener>-->
+    <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
+  <!--</listener>-->
 
 
   <!-- 字符集过滤器 -->
@@ -36,8 +35,7 @@
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
-      <!--<param-value>/WEB-INF/classes/spring-mvc-servlet.xml</param-value>-->
-      <param-value>classpath*:/applicationContext.xml</param-value>
+      <param-value>classpath*:/applicationContext.xml,classpath*:applicationContext-dao.xml</param-value>
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
