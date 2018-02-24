@@ -8,9 +8,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>web</artifactId>
-    <packaging>war</packaging>
+    <packaging>pom</packaging>
     <name>web Maven Webapp</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <module>../mq</module>
+    </modules>
     <dependencies>
         <dependency>
             <groupId>com.liangsl.test</groupId>
