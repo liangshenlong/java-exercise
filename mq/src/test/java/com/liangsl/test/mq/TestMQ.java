@@ -9,7 +9,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import javax.jms.Destination;
 import javax.jms.JMSException;
 
-//TODO 此处启动获取注解ContextConfiguration失败
+/**
+ * TODO 此处启动获取注解ContextConfiguration失败,引入activemq-all包的问题，使用activemq-core则无问题
+ */
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("classpath:applicationContext-mq.xml")
 public class TestMQ{
