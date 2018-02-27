@@ -22,10 +22,10 @@ public class IndexController {
     @RequestMapping("index")
     public String index(ModelMap modelMap){
         logger.info("the first jsp pages");
-        modelMap.put("name","333");
+        modelMap.put("name","王五");
         User user = new User();
         user.setId(UUID.randomUUID().toString());
-        user.setName("张三");
+        user.setName("李四");
         userMapper.save(user);
         return "index";
     }

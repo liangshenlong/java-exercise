@@ -10,6 +10,7 @@
 
     <artifactId>dao</artifactId>
     <packaging>jar</packaging>
+    <version>0.0.1-SNAPSHOT</version>
 
     <name>dao</name>
     <url>http://maven.apache.org</url>
