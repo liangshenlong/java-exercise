@@ -9,7 +9,7 @@
     http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
 
-    <context:component-scan base-package="com.liangsl.test.*" />
+    <context:component-scan base-package="com.liangsl.java.*" />
     <context:property-placeholder location="classpath:jdbc.properties" />
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
@@ -26,7 +26,7 @@
 
     <!-- Mapper接口所在包，Spring会自动查找其下的Mapper -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.liangsl.test.dao "/>
+        <property name="basePackage" value="com.liangsl.java.dao "/>
     </bean>
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />

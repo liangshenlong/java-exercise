@@ -10,7 +10,7 @@
        http://activemq.apache.org/schema/core
        http://activemq.apache.org/schema/core/activemq-core-5.12.1.xsd">
 
-    <context:component-scan base-package="com.liangsl.test.mq" />
+    <context:component-scan base-package="com.liangsl.java.mq" />
 
     <!--<amq:connectionFactory id="amqConnectionFactory"-->
                            <!--brokerURL="tcp://127.0.0.1:61616"-->
@@ -39,7 +39,7 @@
     </bean>
 
 
-    <bean id="defaultQueueListener" class="com.liangsl.test.mq.DefaultQueueListener"></bean>
+    <bean id="defaultQueueListener" class="com.liangsl.java.mq.DefaultQueueListener"></bean>
     <bean id="jmsContainer"
           class="org.springframework.jms.listener.DefaultMessageListenerContainer">
         <property name="connectionFactory" ref="connectionFactory" />

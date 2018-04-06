@@ -14,6 +14,6 @@
                  第一个单词的首字母小写.
      -->
     <typeAliases>
-        <package name="com.liangsl.test.dao"/>
+        <package name="com.liangsl.java.dao"/>
     </typeAliases>
 </configuration>
