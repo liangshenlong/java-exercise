@@ -1,1 +1,1 @@
-a test project
+a exercise project
