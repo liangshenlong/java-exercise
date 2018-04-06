@@ -2,7 +2,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <parent>
         <artifactId>parent</artifactId>
-        <groupId>com.liangsl.test</groupId>
+        <groupId>com.liangsl.java</groupId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../parent/pom.xml</relativePath>
     </parent>
@@ -14,7 +14,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.liangsl.test</groupId>
+            <groupId>com.liangsl.java</groupId>
             <artifactId>dao</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
